@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Ventas y Reclamos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-container" class="container">
+        <h1>Iniciar Sesión</h1>
+        <div class="form-group">
+            <label for="usuario">Usuario:</label>
+            <input type="text" id="usuario" placeholder="Ingrese su nombre de usuario">
+        </div>
+        <div class="form-group">
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" placeholder="Ingrese su contraseña">
+        </div>
+        <div class="form-group">
+            <button onclick="iniciarSesion()">Iniciar Sesión</button>
+            <button onclick="registrar()">Registrar</button>
+        </div>
+    </div>
+
+    <div id="main-container" class="container" style="display:none;">
+        <h1>Control de Ventas y Reclamos</h1>
+        <div class="form-group">
+            <label for="cuenta">Datos de la Cuenta:</label>
+            <input type="text" id="cuenta" placeholder="Ingrese los datos de la cuenta">
+        </div>
+        <div class="form-group">
+            <label for="comprador">Comprador:</label>
+            <input type="text" id="comprador" placeholder="Ingrese el nombre del comprador">
+        </div>
+        <div class="form-group">
+            <button onclick="guardarDatos()">Guardar</button>
+        </div>
+        <div class="form-group">
+            <label for="buscar">Buscar:</label>
+            <input type="text" id="buscar" placeholder="Buscar cuenta..." oninput="buscarDatos()">
+        </div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Datos de la Cuenta</th>
+                        <th>Comprador</th>
+                        <th>Fecha de Compra</th>
+                        <th>Fecha de Vencimiento</th>
+                        <th>Proveedor</th>
+                        <th>Copiar Datos</th>
+                    </tr>
+                </thead>
+                <tbody id="datos-body">
+                    <!-- Los datos guardados aparecerán aquí -->
+                </tbody>
+            </table>
+        </div>
+        <div id="mensaje"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
